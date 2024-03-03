@@ -33,14 +33,18 @@ nav a:hover {
 }
 
 .hero {
-  background: #044C86;
+  background-image: url(images/IMG_0734.jpg); /* Replace with your image path */
+  background-repeat: no-repeat; /* Prevent tiling if image is smaller than body */
+  background-size: cover; /* Resize image to cover the entire body element */
+  background-position: center; /* Center the image horizontally and vertically */
+  /* background: #044C86; */
 }
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: calc((100vw - 1300px) / 2) 1fr 0.85fr;  /* Define left padding, two equal columns */
   height: 95vh;
-  padding: 3rem calc((100vw - 1300px) / 2);
+  /*padding: 0rem calc((100vw - 1300px) / 2);*/
 }
 
 .hero-testimonial {
@@ -62,7 +66,7 @@ nav a:hover {
 .column-testimonial {
   display: flex;
   flex-direction: column;
-  margin-top: 0rem
+  margin-top: 0rem;
   align-items: flex-start;
   color: #fff;
   padding: 0rem 2rem;
@@ -70,12 +74,12 @@ nav a:hover {
 
 .column-left h1 {
   margin-bottom: 1rem;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
 }
 
 .column-left p {
   margin-bottom: 2rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
@@ -97,13 +101,20 @@ button:hover {
 .column-right {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 0rem 2rem;
+
 }
 
 .hero-image {
-  width: 50%;
-  height: 30%;
+  width: 7%;
+  height: 60%;
+}
+
+.right-image {
+  width: 85%;
+  height: 40%;
 }
 
 @media screen and (max-width: 768px) {
